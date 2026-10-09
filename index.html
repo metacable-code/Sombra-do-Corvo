@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Sombra do Corvo</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
+<style>
+  html, body { margin: 0; height: 100%; background: #0b0812; overflow: hidden; touch-action: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+  #game { position: fixed; inset: 0; }
+  .pad { position: fixed; bottom: 14px; display: grid; gap: 6px; z-index: 5; }
+  #dpad { left: 14px; grid-template-columns: repeat(3, 54px); grid-template-rows: repeat(3, 54px); }
+  #acts { right: 14px; grid-template-columns: repeat(2, 76px); }
+  button { border: 2px solid rgba(255,255,255,.35); background: rgba(60,40,100,.45); color: #fff; font: bold 15px monospace; border-radius: 14px; touch-action: none; }
+  button.on { background: rgba(210,43,58,.7); }
+  #acts button { height: 76px; border-radius: 50%; }
+</style>
+</head>
+<body>
+<div id="game"></div>
+<div class="pad" id="dpad">
+  <span></span><button data-k="up">▲</button><span></span>
+  <button data-k="left">◀</button><span></span><button data-k="right">▶</button>
+  <span></span><button data-k="down">▼</button><span></span>
+</div>
+<div class="pad" id="acts">
+  <button data-k="jump">SALTO</button>
+  <button data-k="punch">SOCO</button>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
